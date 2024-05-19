@@ -5,10 +5,20 @@ var express = require('express');
 
 var app = express(); //use the express router object
 
-var router = express.Router(); //create get to return a list of all pies
+var router = express.Router();
+var pies = [{
+  "id": 1,
+  "name": "apple"
+}, {
+  "id": 2,
+  "name": "Cherry"
+}, {
+  "id": 3,
+  "name": "Peach"
+}]; //create get to return a list of all pies
 
 router.get('/', function (req, res, next) {
-  res.send("apple");
+  res.status(206).send(pies);
 }); //configure router so all routes are prefixed wiht /api/v1
 
 app.use('/api/', router); //create server to listen on port 5000

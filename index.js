@@ -4,10 +4,14 @@ let app = express();
 
 //use the express router object
 let router = express.Router();
-
+let pies = [
+    {"id":1, "name": "apple"},
+    {"id":2, "name": "Cherry"},
+    {"id":3, "name": "Peach"},
+];
 //create get to return a list of all pies
 router.get('/', function (req, res, next){
-    res.send("apple");
+    res.status(206).send(pies);
 });
 
 //configure router so all routes are prefixed wiht /api/v1
