@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "name": "Apple Pie",
+      "description": "A classic apple pie made with a flaky crust and spiced apple filling.",
+      "price": 12.99,
+      "available": true
+    },
+    {
+      "id": 2,
+      "name": "Blueberry Pie",
+      "description": "A delicious blueberry pie with a buttery crust and fresh blueberry filling.",
+      "price": 14.99,
+      "available": true
+    },
+    {
+      "id": 3,
+      "name": "Cherry Pie",
+      "description": "A sweet and tart cherry pie with a golden, lattice-top crust.",
+      "price": 13.99,
+      "available": false
+    },
+    {
+      "id": 4,
+      "name": "Pumpkin Pie",
+      "description": "A creamy pumpkin pie with a perfectly spiced filling and a tender crust.",
+      "price": 15.99,
+      "available": true
+    },
+    {
+      "id": 5,
+      "name": "Pecan Pie",
+      "description": "A rich pecan pie with a gooey filling and a crunchy pecan topping.",
+      "price": 16.99,
+      "available": false
+    }
+]
+

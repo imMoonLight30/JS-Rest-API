@@ -1,21 +1,22 @@
 //bring in the espress server and create appliction
 let express = require('express');
 let app = express();
+let pieRepo = require('./repos/pieRepo');
 
 //use the express router object
 let router = express.Router();
-let pies = [
-    {"id":1, "name": "apple"},
-    {"id":2, "name": "Cherry"},
-    {"id":3, "name": "Peach"},
-];
+//let pies = pieRepo.get();
 //create get to return a list of all pies
 router.get('/', function (req, res, next){
-    res.status(206).json({
-        "status": 200,
-        "statusText": "OK",
-        "message": "all pies retrived",
-        "data": pies
+    pieRepo.get(function(data){
+        res.status(206).json({
+            "status": 200,
+            "statusText": "OK",
+            "message": "all pies retrived",
+            "data": data
+        });
+    },function(err){
+        next(err);
     });
 });
 
